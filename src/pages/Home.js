@@ -21,23 +21,23 @@ import {  useState } from 'react';
 function Home() {
     const [slideName,setSlideName] = useState(2)
     
-    // useEffect(()=>{
-    //    setTimeout(()=>{
-    //     scroller.scrollTo(`slide${slideName}`,{
-    //       duration: 1500,
-    //   delay: 100,
-    //   smooth: true,
-    //     });
-    //     if(slideName <=4){
-    //       setSlideName(slideName+1)
-    //       console.log(slideName)
-    //     }
-    //     else{
-    //       setSlideName(1)
-    //       console.log(slideName)
-    //     }
-    //    },10000)
-    // },[slideName])
+    useEffect(()=>{
+       setTimeout(()=>{
+        scroller.scrollTo(`slide${slideName}`,{
+          duration: 1500,
+      delay: 100,
+      smooth: true,
+        });
+        if(slideName <=4){
+          setSlideName(slideName+1)
+          console.log(slideName)
+        }
+        else{
+          setSlideName(1)
+          console.log(slideName)
+        }
+       },10000)
+    },[slideName])
 
 
   const foreground1= {
